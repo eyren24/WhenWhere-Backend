@@ -16,7 +16,7 @@ public partial class Agenda
     public string nomeAgenda { get; set; } = null!;
 
     [Column(TypeName = "text")]
-    public string? descrizione { get; set; }
+    public string? descrizione { get; set; } = null;
 
     [StringLength(50)]
     public string tema { get; set; } = null!;
