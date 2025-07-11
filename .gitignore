@@ -1,0 +1,68 @@
+## Build results
+bin/
+obj/
+out/
+publish/
+
+## Rider / VS Code / Visual Studio folders
+.vs/
+.idea/
+.vscode/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## DNX / .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.deps.json
+
+## NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+*.psmdcp
+.nuget/
+**/packages/*
+
+# Uncomment if using packages folder
+#!**/packages/build/
+#!**/packages/repositories.config
+
+## EF Core migrations metadata
+Migrations/*Designer.cs
+Migrations/*Snapshot.cs
+
+## logs
+*.log
+
+## OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Mac OS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+*.bak
+*.swp
+
+## Local config
+appsettings.Development.json
+secrets.json
+
+## JetBrains
+_ReSharper*/

@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using Database.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Database.Data;
+
+public partial class AppDbContext : DbContext
+{
+    public AppDbContext()
+    {
+    }
+
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options)
+    {
+    }
+
+    public virtual DbSet<Agenda> Agenda { get; set; }
+
+    public virtual DbSet<Evento> Evento { get; set; }
+
+    public virtual DbSet<Nota> Nota { get; set; }
+
+    public virtual DbSet<Tag> Tag { get; set; }
+
+    public virtual DbSet<Utente> Utente { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=sql.bsite.net\\MSSQL2016;Database=eyren24_whenwhere;User Id=eyren24_whenwhere;Password=whenwhere;TrustServerCertificate=True;");
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Agenda>(entity =>
+        {
+            entity.HasOne(d => d.utente).WithMany(p => p.Agenda)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Agenda_Utente");
+        });
+
+        modelBuilder.Entity<Evento>(entity =>
+        {
+            entity.Property(e => e.dataCreazione).HasDefaultValueSql("(getdate())");
+
+            entity.HasOne(d => d.agenda).WithMany(p => p.Evento)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Evento_Agenda");
+
+            entity.HasOne(d => d.tag).WithMany(p => p.Evento)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Evento_Tag");
+        });
+
+        modelBuilder.Entity<Nota>(entity =>
+        {
+            entity.Property(e => e.dataCreazione).HasDefaultValueSql("(getdate())");
+
+            entity.HasOne(d => d.agenda).WithMany(p => p.Nota)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Nota_Agenda");
+
+            entity.HasOne(d => d.tag).WithMany(p => p.Nota)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Nota_Tag");
+        });
+
+        modelBuilder.Entity<Utente>(entity =>
+        {
+            entity.Property(e => e.fotoProfilo).HasDefaultValue("default.png");
+            entity.Property(e => e.lastLogin).HasDefaultValueSql("(getdate())");
+            entity.Property(e => e.preferenzeNotifiche).HasDefaultValue(true);
+            entity.Property(e => e.statoAccount).HasDefaultValue(true);
+            entity.Property(e => e.token).IsFixedLength();
+        });
+
+        OnModelCreatingPartial(modelBuilder);
+    }
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+}
