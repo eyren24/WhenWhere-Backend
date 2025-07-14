@@ -2,31 +2,29 @@
 using System.Security.Claims;
 using System.Text;
 using DTO.Auth;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Http;
 using Repository.Interfaces;
 
-namespace Repository.Services.Auth;
+namespace Repository.services.auth;
 
 public class TokenService : ITokenService
 {
+    
     private readonly string _authKey;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public TokenService(IHttpContextAccessor httpContextAccessor, IConfiguration config)
-    {
+    public TokenService(IHttpContextAccessor httpContextAccessor, IConfiguration config) {
         _httpContextAccessor = httpContextAccessor;
         _authKey = config["AuthKey"]!;
         if (_authKey == null) throw new Exception("[AuthKey] non trovata.");
     }
 
-    public string CreateToken(string nomeCompleto, int utenteId, ERuolo ruolo)
-    {
+    public string CreateToken(string nomeCompleto, int utenteId, ERuolo ruolo) {
         var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authKey));
 
-        var claims = new List<Claim>
-        {
+        var claims = new List<Claim> {
             new(ClaimTypes.NameIdentifier, nomeCompleto),
             new(ClaimTypes.PrimarySid, utenteId.ToString()),
             new(ClaimTypes.Role, ruolo.ToString())
@@ -41,8 +39,7 @@ public class TokenService : ITokenService
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 
-    public TokenInfoDTO? GetInfoToken()
-    {
+    public TokenInfoDTO? GetInfoToken() {
         if (_httpContextAccessor.HttpContext == null)
             return null;
 
@@ -55,8 +52,7 @@ public class TokenService : ITokenService
 
         if (username == null || utenteId == null || ruolo == null) return null;
 
-        return new TokenInfoDTO
-        {
+        return new TokenInfoDTO {
             NomeCompleto = username.Value,
             UtenteId = int.Parse(utenteId.Value),
             Ruolo = Enum.Parse<ERuolo>(ruolo.Value)
