@@ -9,3 +9,18 @@ C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\DTO\ob
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\DTO\obj\Debug\net8.0\refint\DTO.dll
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\DTO\obj\Debug\net8.0\DTO.pdb
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\DTO\obj\Debug\net8.0\ref\DTO.dll
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\bin\Debug\net8.0\DTO.deps.json
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\bin\Debug\net8.0\DTO.runtimeconfig.json
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\bin\Debug\net8.0\DTO.dll
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\bin\Debug\net8.0\DTO.pdb
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.csproj.AssemblyReference.cache
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.sourcelink.json
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.dll
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\refint\DTO.dll
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.pdb
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\DTO.genruntimeconfig.cache
+C:\Users\retym\RiderProjects\WhenWhere-Backend\DTO\obj\Debug\net8.0\ref\DTO.dll
