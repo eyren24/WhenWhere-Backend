@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {}
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\FedericoRenghi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FedericoRenghi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -85,20 +85,20 @@
         }
       }
     },
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\FedericoRenghi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FedericoRenghi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -162,20 +162,20 @@
         }
       }
     },
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\FedericoRenghi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FedericoRenghi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -190,11 +190,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj": {
-                "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
               },
-              "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\DTO\\DTO.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj"
               }
             }
           }
@@ -250,20 +250,20 @@
         }
       }
     },
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
         "projectName": "WhenWhereBackend",
-        "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
-        "packagesPath": "C:\\Users\\FedericoRenghi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FedericoRenghi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -278,8 +278,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Repository\\Repository.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
               }
             }
           }

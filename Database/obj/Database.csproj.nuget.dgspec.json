@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj": {}
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\FedericoRenghi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FedericoRenghi\\Desktop\\VISUAL STUDIO\\WhenWhere-Backend\\Database\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\FedericoRenghi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
