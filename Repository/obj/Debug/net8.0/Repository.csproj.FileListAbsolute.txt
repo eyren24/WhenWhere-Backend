@@ -9,9 +9,3 @@ C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\Reposi
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\Repository\obj\Debug\net8.0\refint\Repository.dll
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\Repository\obj\Debug\net8.0\Repository.pdb
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\Repository\obj\Debug\net8.0\ref\Repository.dll
-C:\Users\retym\RiderProjects\WhenWhere-Backend\Repository\obj\Debug\net8.0\Repository.csproj.AssemblyReference.cache
-C:\Users\retym\RiderProjects\WhenWhere-Backend\Repository\obj\Debug\net8.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\retym\RiderProjects\WhenWhere-Backend\Repository\obj\Debug\net8.0\Repository.AssemblyInfoInputs.cache
-C:\Users\retym\RiderProjects\WhenWhere-Backend\Repository\obj\Debug\net8.0\Repository.AssemblyInfo.cs
-C:\Users\retym\RiderProjects\WhenWhere-Backend\Repository\obj\Debug\net8.0\Repository.csproj.CoreCompileInputs.cache
-C:\Users\retym\RiderProjects\WhenWhere-Backend\Repository\obj\Debug\net8.0\Repository.sourcelink.json
