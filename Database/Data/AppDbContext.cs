@@ -22,6 +22,10 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Nota> Nota { get; set; }
 
+    public virtual DbSet<RefreshToken> RefreshToken { get; set; }
+
+    public virtual DbSet<Ruoli> Ruoli { get; set; }
+
     public virtual DbSet<Tag> Tag { get; set; }
 
     public virtual DbSet<Utente> Utente { get; set; }
@@ -63,6 +67,13 @@ public partial class AppDbContext : DbContext
             entity.HasOne(d => d.tag).WithMany(p => p.Nota)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Nota_Tag");
+        });
+
+        modelBuilder.Entity<RefreshToken>(entity =>
+        {
+            entity.HasOne(d => d.utente).WithMany(p => p.RefreshToken)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_RefreshToken_Utente");
         });
 
         modelBuilder.Entity<Utente>(entity =>

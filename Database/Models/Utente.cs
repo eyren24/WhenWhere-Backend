@@ -44,6 +44,11 @@ public partial class Utente
 
     public bool statoAccount { get; set; }
 
+    public int ruoloId { get; set; }
+
     [InverseProperty("utente")]
     public virtual ICollection<Agenda> Agenda { get; set; } = new List<Agenda>();
+
+    [InverseProperty("utente")]
+    public virtual ICollection<RefreshToken> RefreshToken { get; set; } = new List<RefreshToken>();
 }
