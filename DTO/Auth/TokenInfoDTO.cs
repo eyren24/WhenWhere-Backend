@@ -8,7 +8,7 @@ public enum ERuolo {
 }
 
 public class TokenInfoDTO {
-    [Required] public int UtenteId { get; set; }
-    [Required] public string NomeCompleto { get; set; } = null!;
-    [Required] public ERuolo Ruolo { get; set; }
+    [Required] public int utenteId { get; set; }
+    [Required] public string nomeCompleto { get; set; } = null!;
+    [Required] public ERuolo ruolo { get; set; }
 }
