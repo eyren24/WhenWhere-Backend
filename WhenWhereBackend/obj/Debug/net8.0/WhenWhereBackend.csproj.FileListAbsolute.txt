@@ -33,3 +33,15 @@ C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\WhenWh
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.pdb
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.genruntimeconfig.cache
 C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\Project-WW\WhenWhereBackend\WhenWhereBackend\obj\Debug\net8.0\ref\WhenWhereBackend.dll
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.csproj.AssemblyReference.cache
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.AssemblyInfoInputs.cache
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.AssemblyInfo.cs
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.csproj.CoreCompileInputs.cache
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.sourcelink.json
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.dll
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\refint\WhenWhereBackend.dll
+C:\Users\FedericoRenghi\Desktop\VISUAL STUDIO\WhenWhere-Backend\WhenWhereBackend\obj\Debug\net8.0\WhenWhereBackend.pdb

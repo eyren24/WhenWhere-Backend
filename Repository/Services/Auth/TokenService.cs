@@ -5,6 +5,7 @@ using DTO.Auth;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Http;
+using Repository.Interfaces;
 
 namespace Repository.Services.Auth;
 
