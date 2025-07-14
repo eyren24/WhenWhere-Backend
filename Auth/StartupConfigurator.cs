@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Repository.Interfaces;
 using Repository.Services.Auth;
 
 namespace Auth;

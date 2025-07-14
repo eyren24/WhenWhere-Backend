@@ -1,6 +1,8 @@
-﻿namespace Repository.Services.Auth;
+﻿using Database.Data;
 
-public class AuthRepository
+namespace Repository.Services.Auth;
+
+public class AuthRepository (AppDbContext _context)
 {
     
 }

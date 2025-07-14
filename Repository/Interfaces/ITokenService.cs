@@ -1,6 +1,6 @@
 ﻿using DTO.Auth;
 
-namespace Repository.Services.Auth;
+namespace Repository.Interfaces;
 
 public interface ITokenService
 {
