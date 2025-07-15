@@ -53,9 +53,9 @@ public class TokenService : ITokenService
         if (username == null || utenteId == null || ruolo == null) return null;
 
         return new TokenInfoDTO {
-            NomeCompleto = username.Value,
-            UtenteId = int.Parse(utenteId.Value),
-            Ruolo = Enum.Parse<ERuolo>(ruolo.Value)
+            nomeCompleto = username.Value,
+            utenteId = int.Parse(utenteId.Value),
+            ruolo = Enum.Parse<ERuolo>(ruolo.Value)
         };
     }
 }
