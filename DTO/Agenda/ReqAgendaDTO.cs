@@ -10,7 +10,6 @@ namespace DTO.Agenda
 {
     public class ReqAgendaDTO
     {
-        public int utenteId { get; set; }
         [Required]
         public string nomeAgenda { get; set; } = null!;
 

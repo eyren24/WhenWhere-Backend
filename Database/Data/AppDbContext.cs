@@ -29,11 +29,7 @@ public partial class AppDbContext : DbContext
     public virtual DbSet<Tag> Tag { get; set; }
 
     public virtual DbSet<Utente> Utente { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=sql.bsite.net\\MSSQL2016;Database=eyren24_whenwhere;User Id=eyren24_whenwhere;Password=whenwhere;TrustServerCertificate=True;");
-
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Agenda>(entity =>
@@ -81,8 +77,13 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.fotoProfilo).HasDefaultValue("default.png");
             entity.Property(e => e.lastLogin).HasDefaultValueSql("(getdate())");
             entity.Property(e => e.preferenzeNotifiche).HasDefaultValue(true);
+            entity.Property(e => e.ruoloId).HasDefaultValue(2);
             entity.Property(e => e.statoAccount).HasDefaultValue(true);
             entity.Property(e => e.token).IsFixedLength();
+
+            entity.HasOne(d => d.ruolo).WithMany(p => p.Utente)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Utente_Ruoli");
         });
 
         OnModelCreatingPartial(modelBuilder);

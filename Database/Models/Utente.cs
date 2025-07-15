@@ -35,20 +35,22 @@ public partial class Utente
 
     public string fotoProfilo { get; set; } = null!;
 
-    public bool isAdmin { get; set; }
-
     [Column(TypeName = "datetime")]
     public DateTime lastLogin { get; set; }
 
-    public bool preferenzeNotifiche { get; set; }
+    public bool preferenzeNotifiche { get; set; } = true;
 
-    public bool statoAccount { get; set; }
+    public bool statoAccount { get; set; } = true;
 
-    public int ruoloId { get; set; }
+    public int ruoloId { get; set; } = 2;
 
     [InverseProperty("utente")]
     public virtual ICollection<Agenda> Agenda { get; set; } = new List<Agenda>();
 
     [InverseProperty("utente")]
     public virtual ICollection<RefreshToken> RefreshToken { get; set; } = new List<RefreshToken>();
+
+    [ForeignKey("ruoloId")]
+    [InverseProperty("Utente")]
+    public virtual Ruoli ruolo { get; set; } = null!;
 }

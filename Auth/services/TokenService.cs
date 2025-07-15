@@ -1,15 +1,15 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using DTO.Auth;
+using Auth.dto;
+using Auth.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using Repository.Interfaces;
 
-namespace Repository.services.auth;
+namespace Auth.services;
 
-public class TokenService : ITokenService
+public class TokenService :  ITokenService
 {
     private readonly string _authKey;
     private readonly IHttpContextAccessor _httpContextAccessor;

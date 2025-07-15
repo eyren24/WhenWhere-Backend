@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DTO.Auth;
+namespace Auth.dto;
 
 public enum ERuolo {
     Amministratore = 1,

@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Repository.Interfaces;
-using Repository.services.auth;
+﻿using Auth.Interfaces;
+using Auth.services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Auth;
 

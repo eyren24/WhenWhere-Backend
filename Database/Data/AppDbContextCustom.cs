@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Auth.dto;
+using Auth.Interfaces;
+using Database.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 
@@ -8,7 +10,7 @@ public partial class AppDbContext : DbContext {
     private readonly IHostEnvironment _environment;
     private readonly ITokenService _tokenService;
 
-    public MyDbContext(DbContextOptions<AppDbContext> options, ITokenService tokenService,
+    public AppDbContext(DbContextOptions<AppDbContext> options, ITokenService tokenService,
         IHostEnvironment environment) : base(options) {
         _tokenService = tokenService;
         _environment = environment;
@@ -30,9 +32,11 @@ public partial class AppDbContext : DbContext {
             .EnableDetailedErrors();
     }
 
-    /*partial void OnModelCreatingPartial(ModelBuilder modelBuilder) {
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder) {
         base.OnModelCreating(modelBuilder);
-        /*modelBuilder.Entity<Utenti>()
-            .HasQueryFilter(u => TokenInfo.Ruolo == ERuolo.Amministratore || u.id == TokenInfo.UtenteId);
-    }*/
+        modelBuilder.Entity<Agenda>()
+            .HasQueryFilter(u => TokenInfo.ruolo == ERuolo.Amministratore || u.utenteId == TokenInfo.utenteId);
+      modelBuilder.Entity<Utente>()
+            .HasQueryFilter(u => u.statoAccount);
+    }
 }

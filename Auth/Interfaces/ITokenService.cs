@@ -1,6 +1,6 @@
-﻿using DTO.Auth;
+﻿using Auth.dto;
 
-namespace Repository.Interfaces;
+namespace Auth.Interfaces;
 
 public interface ITokenService
 {
