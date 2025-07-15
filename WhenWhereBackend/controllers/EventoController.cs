@@ -1,22 +1,23 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Auth.dto;
 using DTO.Agenda;
+using DTO.Evento;
 using Microsoft.AspNetCore.Mvc;
 using Repository.interfaces;
 using WhenWhereBackend.DecoratoriCustom;
 
 namespace WhenWhereBackend.controllers;
 
-public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
+public class EventoController(IEventoRepo _eventoRepo) : CustomController
 {
     [HttpPost]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> AddAgenda([Required] ReqAgendaDTO agenda)
+    public async Task<IActionResult> AddAsync([Required] ReqEventoDTO evento)
     {
         try
         {
-            await _agendaRepo.AddAsync(agenda);
-            return Ok("Agenda creata con successo.");
+            await _eventoRepo.AddAsync(evento);
+            return Ok("Evento creato con successo!");
         }
         catch (Exception e)
         {
@@ -26,11 +27,11 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> GetAllAsync()
+    public async Task<ActionResult<List<ResEventoDTO>>> GetAllAsync([Required] int agendaId, [Required] FiltriAgendaDTO filtri)
     {
         try
         {
-            return Ok(await _agendaRepo.GetListAsync());
+            return Ok(await _eventoRepo.GetAllAsync(agendaId, filtri));
         }
         catch (Exception e)
         {
@@ -40,12 +41,12 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 
     [HttpDelete]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> RemoveAsync([Required] int agendaId)
+    public async Task<IActionResult> RemoveAsync([Required] int eventoId)
     {
         try
         {
-            await _agendaRepo.RemoveAsync(agendaId);
-            return Ok("Agenda rimossa con successo");
+            await _eventoRepo.RemoveAsync(eventoId);
+            return Ok("Evento rimosso con successo!");
         }
         catch (Exception e)
         {
@@ -55,12 +56,12 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 
     [HttpPut]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> UpdateAsync([Required] int agendaId, ReqUpdateAgenda agenda)
+    public async Task<IActionResult> UpdateAsync([Required] int eventoId, [Required] ReqUpdateEventoDTO eveto)
     {
         try
         {
-            await _agendaRepo.UpdateAsync(agendaId, agenda);
-            return Ok("Agenda rimossa con successo");
+            await _eventoRepo.UpdateAsync(eventoId, eveto);
+            return Ok("Evento aggiornato con successo!");
         }
         catch (Exception e)
         {

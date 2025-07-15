@@ -35,7 +35,7 @@ public class EventoRepo(AppDbContext _context, IMapper _mapper) : IEventoRepo
         return modello.id;
     }
 
-    public async Task RemoveAsync(ReqEventoDTO eventoId)
+    public async Task RemoveAsync(int eventoId)
     {
         var evento = await _context.Evento.FindAsync(eventoId);
         if (evento == null)

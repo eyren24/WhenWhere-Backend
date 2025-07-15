@@ -36,6 +36,8 @@ public partial class AppDbContext : DbContext {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Agenda>()
             .HasQueryFilter(u => TokenInfo.ruolo == ERuolo.Amministratore || u.utenteId == TokenInfo.utenteId);
+        modelBuilder.Entity<Nota>()
+            .HasQueryFilter(u => TokenInfo.ruolo == ERuolo.Amministratore || u.agenda.utenteId == TokenInfo.utenteId);
       modelBuilder.Entity<Utente>()
             .HasQueryFilter(u => u.statoAccount);
     }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using AutoMapper;
 using Database.Data;
 using Database.Models;
@@ -15,6 +16,11 @@ public class NotaRepo(
 {
     public async Task<int> AddAsync(ReqNotaDTO nota)
     {
+        var check = await _context.Nota.AnyAsync(p => p.titolo == nota.titolo && p.dataCreazione == nota.dataCreazione);
+        if (check)
+        {
+            throw new Exception("Una nota con combinazione di titolo e data e' gia esistente");
+        }
         var modello = _mapper.Map<Nota>(nota);
         await _context.Nota.AddAsync(modello);
         await _context.SaveChangesAsync();

@@ -7,6 +7,6 @@ public interface IEventoRepo
 {
     Task<List<ResEventoDTO>> GetAllAsync(int agendaId, FiltriAgendaDTO filtri);
     Task<int> AddAsync(ReqEventoDTO evento);
-    Task RemoveAsync(ReqEventoDTO eventoId);
+    Task RemoveAsync(int eventoId);
     Task UpdateAsync(int id, ReqUpdateEventoDTO eventoDto);
 }
