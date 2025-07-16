@@ -5,6 +5,7 @@ using Repository.Services.agenda;
 using Repository.services.auth;
 using Repository.services.evento;
 using Repository.services.note;
+using Repository.services.utente;
 
 namespace Repository;
 
@@ -35,6 +36,14 @@ public static class StartUpConfiguratorRepo
         services.AddScoped<IEventoRepo, EventoRepo>();
 
         #endregion
+
+        #region Utente
+
+        services.AddScoped<IUtenteRepo, UtenteRepo>();
+
+        #endregion
+
+
 
     }
 
