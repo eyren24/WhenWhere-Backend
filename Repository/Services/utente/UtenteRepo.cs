@@ -9,7 +9,7 @@ using Repository.interfaces;
 
 namespace Repository.services.utente;
 
-public class UtenteRepo( AppDbContext _context, Mapper _mapper, ITokenService _token) : IUtenteRepo
+public class UtenteRepo( AppDbContext _context, IMapper _mapper, ITokenService _token) : IUtenteRepo
 {
     public async Task UpdateAsync(int id, ReqUpdateUtenteDTO utenteUpdate)
     {
@@ -82,9 +82,7 @@ public class UtenteRepo( AppDbContext _context, Mapper _mapper, ITokenService _t
 
         query = query.Where(u => u.statoAccount == filtri.statoAccount);
         //lista filtrata
-        var utenti = await query.ToListAsync();
-
-        var result = _mapper.Map<List<ResUtenteDTO>>(utenti);
-        return result;
+        var utenti = await query.Select((ute) => _mapper.Map<ResUtenteDTO>(ute)).ToListAsync();
+        return utenti;
     }
 }

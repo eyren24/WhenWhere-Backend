@@ -2,6 +2,8 @@
 using Database.Models;
 using DTO.Agenda;
 using DTO.Auth;
+using DTO.Evento;
+using DTO.Utente;
 
 namespace Repository.profiler;
 
@@ -16,9 +18,17 @@ public class Profilers : Profile
 
         #endregion
 
+        #region Evento
+
+        CreateMap<ReqEventoDTO, Evento>().ReverseMap();
+        CreateMap<ResEventoDTO, Evento>().ReverseMap();
+
+        #endregion
+
         #region Auth
 
         CreateMap<ReqRegisterUser, Utente>().ReverseMap();
+        CreateMap<ResUtenteDTO, Utente>().ReverseMap();
         CreateMap<ReqLoginUser, Utente>().ReverseMap();
 
         #endregion

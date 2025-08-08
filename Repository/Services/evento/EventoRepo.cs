@@ -23,8 +23,7 @@ public class EventoRepo(AppDbContext _context, IMapper _mapper) : IEventoRepo
             query = query.Where(n => n.tagId == filtri.tagId);
         }
 
-        return await _context.Evento.Select(p => _mapper.Map<ResEventoDTO>(p)).Where(p => p.agendaId == agendaId)
-            .ToListAsync();
+        return await query.Select(p => _mapper.Map<ResEventoDTO>(p)).ToListAsync();
     }
 
     public async Task<int> AddAsync(ReqEventoDTO evento)

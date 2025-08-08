@@ -25,7 +25,7 @@ public class EventoController(IEventoRepo _eventoRepo) : CustomController
         }
     }
 
-    [HttpGet]
+    [HttpPost]
     [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<List<ResEventoDTO>>> GetAllAsync([Required] int agendaId, [Required] FiltriAgendaDTO filtri)
     {

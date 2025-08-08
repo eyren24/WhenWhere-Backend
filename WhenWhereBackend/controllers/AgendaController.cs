@@ -26,7 +26,7 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> GetAllAsync()
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetAllAsync()
     {
         try
         {

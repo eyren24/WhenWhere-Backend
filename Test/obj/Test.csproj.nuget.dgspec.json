@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj": {}
+    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
+        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
         "projectName": "Auth",
-        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
-        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\obj\\",
+        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
+        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,9 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -83,40 +77,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
+        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
-                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
+              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
               }
             }
           }
@@ -129,9 +117,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -172,40 +160,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj": {
+    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Test\\obj\\",
+        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
-                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
+              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
               }
             }
           }
@@ -218,9 +200,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -272,7 +254,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
