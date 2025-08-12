@@ -54,7 +54,20 @@ public class EventoRepo(AppDbContext _context, IMapper _mapper) : IEventoRepo
 
         modello.titolo = eventoDto.titolo;
         modello.stato = eventoDto.stato;
+        modello.descrizione = eventoDto.descrizione;
+        modello.tagId = eventoDto.tagId;
         _context.Evento.Update(modello);
         await _context.SaveChangesAsync();
+    }
+    
+    public async Task<ResEventoDTO> GetByTitle(int agendaId, string titolo)
+    {
+        var evento = await _context.Evento.Where((p) => p.titolo == titolo).FirstOrDefaultAsync();
+        if (evento ==  null)
+        {
+            throw new Exception($"Evento con titolo: {titolo} non trovato");
+        }
+
+        return _mapper.Map<ResEventoDTO>(evento);
     }
 }

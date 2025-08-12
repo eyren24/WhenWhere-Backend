@@ -68,4 +68,18 @@ public class EventoController(IEventoRepo _eventoRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
+
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<ResEventoDTO>> GetEventoByTitle(int agendaId, string titolo)
+    {
+        try
+        {
+            return Ok(await _eventoRepo.GetByTitle(agendaId, titolo));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }

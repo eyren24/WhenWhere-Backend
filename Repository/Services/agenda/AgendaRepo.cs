@@ -58,4 +58,15 @@ public class AgendaRepo(
             .Select(a => _mapper.Map<ResAgendaDTO>(a))
             .ToListAsync();
     }
+
+    public async Task<ResAgendaDTO> GetById(int id)
+    {
+        var agenda = await _context.Agenda.FindAsync(id);
+        if (agenda == null)
+        {
+            throw new Exception
+                ($"Agenda con id {id} non trovata");
+        }
+        return _mapper.Map<ResAgendaDTO>(agenda);
+    }
 }

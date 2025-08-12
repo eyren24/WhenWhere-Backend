@@ -67,4 +67,17 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<ResAgendaDTO>> GetByIdAsync([Required] int agendaId)
+    {
+        try
+        {
+            return Ok(await _agendaRepo.GetById(agendaId));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }

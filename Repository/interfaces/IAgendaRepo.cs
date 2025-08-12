@@ -9,4 +9,5 @@ public interface IAgendaRepo
     Task UpdateAsync(int id, ReqUpdateAgenda agendaUpdt);
     Task RemoveAsync(int agendaId);
     Task<List<ResAgendaDTO>> GetListAsync();
+    Task<ResAgendaDTO> GetById(int id);
 }

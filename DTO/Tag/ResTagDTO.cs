@@ -13,6 +13,6 @@ namespace DTO.Tag
         public int id {  get; set; }
         [Required]
         [StringLength(50)]
-        public string name { get; set; } = null;
+        public string nome { get; set; } = null;
     }
 }

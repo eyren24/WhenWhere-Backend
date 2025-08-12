@@ -9,4 +9,5 @@ public interface IEventoRepo
     Task<int> AddAsync(ReqEventoDTO evento);
     Task RemoveAsync(int eventoId);
     Task UpdateAsync(int id, ReqUpdateEventoDTO eventoDto);
+    Task<ResEventoDTO> GetByTitle(int agendaId, string titolo);
 }
