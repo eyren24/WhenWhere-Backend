@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Database.Models;
 
+[Index("email", Name = "IX_Utente", IsUnique = true)]
 public partial class Utente
 {
     [Key]
@@ -38,11 +39,11 @@ public partial class Utente
     [Column(TypeName = "datetime")]
     public DateTime lastLogin { get; set; }
 
-    public bool preferenzeNotifiche { get; set; } = true;
+    public bool preferenzeNotifiche { get; set; }
 
-    public bool statoAccount { get; set; } = true;
+    public bool statoAccount { get; set; }
 
-    public int ruoloId { get; set; } = 2;
+    public int ruoloId { get; set; }
 
     [InverseProperty("utente")]
     public virtual ICollection<Agenda> Agenda { get; set; } = new List<Agenda>();

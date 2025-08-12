@@ -43,9 +43,7 @@ public partial class AppDbContext : DbContext
         {
             entity.Property(e => e.dataCreazione).HasDefaultValueSql("(getdate())");
 
-            entity.HasOne(d => d.agenda).WithMany(p => p.Evento)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Evento_Agenda");
+            entity.HasOne(d => d.agenda).WithMany(p => p.Evento).HasConstraintName("FK_Evento_Agenda");
 
             entity.HasOne(d => d.tag).WithMany(p => p.Evento)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -56,9 +54,7 @@ public partial class AppDbContext : DbContext
         {
             entity.Property(e => e.dataCreazione).HasDefaultValueSql("(getdate())");
 
-            entity.HasOne(d => d.agenda).WithMany(p => p.Nota)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Nota_Agenda");
+            entity.HasOne(d => d.agenda).WithMany(p => p.Nota).HasConstraintName("FK_Nota_Agenda");
 
             entity.HasOne(d => d.tag).WithMany(p => p.Nota)
                 .OnDelete(DeleteBehavior.ClientSetNull)
