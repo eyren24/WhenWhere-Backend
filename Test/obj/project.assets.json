@@ -10974,19 +10974,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emili\\.nuget\\packages\\": {}
+    "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Test\\obj\\",
+      "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -10998,8 +10998,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
-              "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
+            "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+              "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
             }
           }
         }
@@ -11012,9 +11012,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -11066,30 +11066,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Net.Http' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-7jgj-8wvc-jh57",
-      "libraryId": "System.Net.Http",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Text.RegularExpressions' 4.3.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-cmhx-cq75-c4mj",
-      "libraryId": "System.Text.RegularExpressions",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }

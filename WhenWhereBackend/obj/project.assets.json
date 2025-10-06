@@ -6472,19 +6472,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emili\\.nuget\\packages\\": {}
+    "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+      "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
       "projectName": "WhenWhereBackend",
-      "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
-      "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
+      "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+      "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -6496,8 +6496,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
+            "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
             }
           }
         }
@@ -6510,9 +6510,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -6568,7 +6568,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,16 +13,16 @@ public partial class Evento
 
     public int agendaId { get; set; }
 
-    [Column(TypeName = "datetime")]
+    [Column(TypeName = "smalldatetime")]
     public DateTime dataInizio { get; set; }
 
-    [Column(TypeName = "datetime")]
+    [Column(TypeName = "smalldatetime")]
     public DateTime? dataFine { get; set; }
 
     [Column(TypeName = "text")]
     public string? descrizione { get; set; }
 
-    [Column(TypeName = "decimal(1, 1)")]
+    [Column(TypeName = "decimal(1, 0)")]
     public decimal? rating { get; set; }
 
     [StringLength(50)]
@@ -33,7 +33,7 @@ public partial class Evento
 
     public bool notifica { get; set; }
 
-    [Column(TypeName = "datetime")]
+    [Column(TypeName = "smalldatetime")]
     public DateTime dataCreazione { get; set; }
 
     [StringLength(50)]

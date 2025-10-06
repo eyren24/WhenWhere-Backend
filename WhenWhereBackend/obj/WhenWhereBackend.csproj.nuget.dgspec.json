@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {}
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
+        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
         "projectName": "Auth",
-        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
-        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\obj\\",
+        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
+        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -36,9 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -77,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
+        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -103,8 +103,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
-                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
+              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
               }
             }
           }
@@ -117,9 +117,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -160,21 +160,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -196,9 +196,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -231,21 +231,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -257,14 +257,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
-                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
+              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
               },
-              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
-                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
+              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
               },
-              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj"
+              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj"
               }
             }
           }
@@ -277,9 +277,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -328,21 +328,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
         "projectName": "WhenWhereBackend",
-        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
-        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
+        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -354,8 +354,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
+              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
               }
             }
           }
@@ -368,9 +368,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -426,7 +426,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

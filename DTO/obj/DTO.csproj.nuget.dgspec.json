@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {}
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\emili\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emili\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emili\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -36,9 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\emili\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -57,7 +57,7 @@ public class TagController(ITagRepo _tagRepo) : CustomController
 
     [HttpGet]
     [AuthorizeRole(ERuolo.Amministratore, ERuolo.Utente)] 
-    public async Task<IActionResult> GetListAsync()
+    public async Task<ActionResult<List<ResTagDTO>>> GetListAsync()
     {
         try
         {

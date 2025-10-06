@@ -19,7 +19,7 @@ public partial class Nota
     [Column(TypeName = "text")]
     public string? descrizione { get; set; }
 
-    [Column(TypeName = "datetime")]
+    [Column(TypeName = "smalldatetime")]
     public DateTime dataCreazione { get; set; }
 
     [StringLength(50)]
