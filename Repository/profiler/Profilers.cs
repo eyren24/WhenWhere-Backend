@@ -3,6 +3,7 @@ using Database.Models;
 using DTO.Agenda;
 using DTO.Auth;
 using DTO.Evento;
+using DTO.Tag;
 using DTO.Utente;
 
 namespace Repository.profiler;
@@ -30,6 +31,12 @@ public class Profilers : Profile
         CreateMap<ReqRegisterUser, Utente>().ReverseMap();
         CreateMap<ResUtenteDTO, Utente>().ReverseMap();
         CreateMap<ReqLoginUser, Utente>().ReverseMap();
+
+        #endregion
+
+        #region Tags
+
+        CreateMap<ResTagDTO, Tag>().ReverseMap();
 
         #endregion
     }
