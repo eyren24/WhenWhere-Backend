@@ -21,6 +21,8 @@ public partial class Agenda
     [StringLength(50)]
     public string tema { get; set; } = null!;
 
+    public bool isprivate { get; set; }
+
     [InverseProperty("agenda")]
     public virtual ICollection<Evento> Evento { get; set; } = new List<Evento>();
 

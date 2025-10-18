@@ -10,20 +10,14 @@ namespace DTO.Agenda
 {
     public class ResAgendaDTO
     {
-        [Required]
-        public int id { get; set; }
+        [Required] public int id { get; set; }
 
-        [Required]
-        public int utenteId { get; set; }
-        [Required]
-        public string nomeAgenda { get; set; } = null!;
+        [Required] public int utenteId { get; set; }
+        [Required] public string nomeAgenda { get; set; } = null!;
 
-        [Required]
-        [Column(TypeName = "text")]
-        public string? descrizione { get; set; } = null;
+        [Required] [Column(TypeName = "text")] public string? descrizione { get; set; } = null;
 
-        [StringLength(50)]
-        [Required]
-        public string tema { get; set; } = null!;
+        [StringLength(50)] [Required] public string tema { get; set; } = null!;
+        [Required] public bool isprivate { get; set; } = false;
     }
 }

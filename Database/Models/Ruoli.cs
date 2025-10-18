@@ -12,7 +12,4 @@ public partial class Ruoli
     public int id { get; set; }
 
     public string nome { get; set; } = null!;
-
-    [InverseProperty("ruolo")]
-    public virtual ICollection<Utente> Utente { get; set; } = new List<Utente>();
 }

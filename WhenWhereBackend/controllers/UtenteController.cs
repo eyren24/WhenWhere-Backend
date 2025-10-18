@@ -3,6 +3,7 @@ using Auth.dto;
 using DTO.Agenda;
 using DTO.Nota;
 using DTO.Utente;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.interfaces;
 using WhenWhereBackend.DecoratoriCustom;
@@ -49,6 +50,36 @@ public class UtenteController(IUtenteRepo _utenteRepo) : ControllerBase
         {
             await _utenteRepo.UpdateAsync(utenteId, utente);
             return Ok("Utente aggiornato con successo!");
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<ActionResult<ResUtenteDTO>> GetById([Required] int utenteId)
+    {
+        try
+        {
+            var res = await _utenteRepo.GetUtenteByIdAsync(utenteId);
+            return Ok(res);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<ActionResult<ResUtenteDTO>> GetByUsername([Required] string username)
+    {
+        try
+        {
+            var res = await _utenteRepo.GetUtenteByUsernameAsync(username);
+            return Ok(res);
         }
         catch (Exception e)
         {

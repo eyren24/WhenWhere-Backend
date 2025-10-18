@@ -18,5 +18,6 @@ namespace DTO.Agenda
 
         [StringLength(50)]
         public string tema { get; set; } = null!;
+        public bool isprivate { get; set; } = false;
     }
 }

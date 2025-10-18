@@ -17,10 +17,12 @@ public class AgendaRepo(
     public async Task<int> AddAsync(ReqAgendaDTO agenda)
     {
         var tokeninfo = _token.GetInfoToken();
-        
-        if (tokeninfo == null) {
+
+        if (tokeninfo == null)
+        {
             throw new Exception("Token non valido");
         }
+
         var modello = _mapper.Map<Agenda>(agenda);
         modello.utenteId = tokeninfo.utenteId;
         await _context.Agenda.AddAsync(modello);
@@ -48,7 +50,6 @@ public class AgendaRepo(
             throw new Exception($"Agenda non trovata con ID: {agendaId}");
         _context.Agenda.Remove(agenda);
         await _context.SaveChangesAsync();
-        
     }
 
     public async Task<List<ResAgendaDTO>> GetListAsync()
@@ -67,6 +68,20 @@ public class AgendaRepo(
             throw new Exception
                 ($"Agenda con id {id} non trovata");
         }
+
+        return _mapper.Map<ResAgendaDTO>(agenda);
+    }
+
+    public async Task<ResAgendaDTO> GetByOwner(string username)
+    {
+        var agenda = await _context.Agenda.Include(t => t.utente)
+            .FirstOrDefaultAsync(p => p.utente.username == username);
+        if (agenda == null)
+        {
+            throw new Exception
+                ($"Agenda con proprietario {username} non trovata");
+        }
+
         return _mapper.Map<ResAgendaDTO>(agenda);
     }
 }

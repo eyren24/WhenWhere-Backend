@@ -60,7 +60,7 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         try
         {
             await _agendaRepo.UpdateAsync(agendaId, agenda);
-            return Ok("Agenda rimossa con successo");
+            return Ok("Agenda aggiornata");
         }
         catch (Exception e)
         {
@@ -74,6 +74,19 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         try
         {
             return Ok(await _agendaRepo.GetById(agendaId));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<ResAgendaDTO>> GetByOwner([Required] string username)
+    {
+        try
+        {
+            return Ok(await _agendaRepo.GetByOwner(username));
         }
         catch (Exception e)
         {

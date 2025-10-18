@@ -11,6 +11,10 @@ public class ReqRegisterUser
     [StringLength(50)]
     [Required]
     public string cognome { get; set; } = null!;
+    
+    [StringLength(50)]
+    [Required]
+    public string username { get; set; } = null!;
 
     [StringLength(50)]
     [Required]

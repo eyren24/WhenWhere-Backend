@@ -20,6 +20,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<Evento> Evento { get; set; }
 
+    public virtual DbSet<Likes> Likes { get; set; }
+
     public virtual DbSet<Nota> Nota { get; set; }
 
     public virtual DbSet<RefreshToken> RefreshToken { get; set; }
@@ -34,6 +36,8 @@ public partial class AppDbContext : DbContext
     {
         modelBuilder.Entity<Agenda>(entity =>
         {
+            entity.Property(e => e.isprivate).HasDefaultValue(true);
+
             entity.HasOne(d => d.utente).WithMany(p => p.Agenda)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Agenda_Utente");
@@ -48,6 +52,19 @@ public partial class AppDbContext : DbContext
             entity.HasOne(d => d.tag).WithMany(p => p.Evento)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Evento_Tag");
+        });
+
+        modelBuilder.Entity<Likes>(entity =>
+        {
+            entity.Property(e => e.id).ValueGeneratedOnAdd();
+
+            entity.HasOne(d => d.agenda).WithMany()
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Likes_Agenda");
+
+            entity.HasOne(d => d.utente).WithMany()
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Likes_Utente");
         });
 
         modelBuilder.Entity<Nota>(entity =>
@@ -76,10 +93,6 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.ruoloId).HasDefaultValue(2);
             entity.Property(e => e.statoAccount).HasDefaultValue(true);
             entity.Property(e => e.token).IsFixedLength();
-
-            entity.HasOne(d => d.ruolo).WithMany(p => p.Utente)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Utente_Ruoli");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -3,6 +3,7 @@ using Database.Models;
 using DTO.Agenda;
 using DTO.Auth;
 using DTO.Evento;
+using DTO.Likes;
 using DTO.Tag;
 using DTO.Utente;
 
@@ -37,6 +38,13 @@ public class Profilers : Profile
         #region Tags
 
         CreateMap<ResTagDTO, Tag>().ReverseMap();
+
+        #endregion
+
+        #region Likes
+
+        CreateMap<ReqLikesDTO, Likes>().ReverseMap();
+        CreateMap<ResLikesDTO, Likes>().ReverseMap();
 
         #endregion
     }

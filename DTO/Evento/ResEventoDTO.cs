@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DTO.Utente;
 
 namespace DTO.Evento;
 
@@ -48,4 +49,6 @@ public class ResEventoDTO
 
     [Required]
     public int tagId { get; set; }
+
+    [Required] public List<TaggedUsersDTO> taggedUsers { get; set; } = null!;
 }

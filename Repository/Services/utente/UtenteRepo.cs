@@ -9,7 +9,7 @@ using Repository.interfaces;
 
 namespace Repository.services.utente;
 
-public class UtenteRepo( AppDbContext _context, IMapper _mapper, ITokenService _token) : IUtenteRepo
+public class UtenteRepo(AppDbContext _context, IMapper _mapper, ITokenService _token) : IUtenteRepo
 {
     public async Task UpdateAsync(int id, ReqUpdateUtenteDTO utenteUpdate)
     {
@@ -34,7 +34,7 @@ public class UtenteRepo( AppDbContext _context, IMapper _mapper, ITokenService _
         {
             throw new Exception("Token non valido");
         }
-        
+
         if (tokenInfo.ruolo != ERuolo.Amministratore && tokenInfo.utenteId != id)
         {
             throw new Exception("Non sei autorizzato a modificare lo stato di questo account");
@@ -62,6 +62,7 @@ public class UtenteRepo( AppDbContext _context, IMapper _mapper, ITokenService _
         {
             throw new Exception("Accesso  autorizzato solo agli amministratori");
         }
+
         //filtri
         var query = _context.Utente.AsQueryable();
 
@@ -84,5 +85,27 @@ public class UtenteRepo( AppDbContext _context, IMapper _mapper, ITokenService _
         //lista filtrata
         var utenti = await query.Select((ute) => _mapper.Map<ResUtenteDTO>(ute)).ToListAsync();
         return utenti;
+    }
+
+    public async Task<ResUtenteDTO> GetUtenteByIdAsync(int id)
+    {
+        var utente = await _context.Utente.FindAsync(id);
+        if (utente == null)
+        {
+            throw new Exception($"Utente con id: {id} non trovato");
+        }
+
+        return _mapper.Map<ResUtenteDTO>(utente);
+    }
+    
+    public async Task<ResUtenteDTO> GetUtenteByUsernameAsync(string username)
+    {
+        var utente = await _context.Utente.FirstOrDefaultAsync(p=> p.username == username);
+        if (utente == null)
+        {
+            throw new Exception($"Utente {username} non trovato");
+        }
+
+        return _mapper.Map<ResUtenteDTO>(utente);
     }
 }

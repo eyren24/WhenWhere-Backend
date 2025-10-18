@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {}
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
         "projectName": "Auth",
-        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
-        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,34 +87,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
-                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
               }
             }
           }
@@ -168,26 +180,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -212,6 +230,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -243,40 +265,46 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
-                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Auth\\Auth.csproj"
               },
-              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
-                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Database\\Database.csproj"
               },
-              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\DTO\\DTO.csproj"
               }
             }
           }
@@ -344,34 +372,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {
+    "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+        "projectUniqueName": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
         "projectName": "WhenWhereBackend",
-        "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
-        "packagesPath": "C:\\Users\\EmilianoDellaCiana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
+        "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\WhenWhereBackend.csproj",
+        "packagesPath": "C:\\Users\\retym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\WhenWhereBackend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\EmilianoDellaCiana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\retym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\EmilianoDellaCiana\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
+              "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\retym\\RiderProjects\\WhenWhere-Backend\\Repository\\Repository.csproj"
               }
             }
           }
@@ -446,7 +480,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\EmilianoDellaCiana\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
