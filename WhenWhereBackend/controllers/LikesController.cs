@@ -45,7 +45,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
         try
         {
             await _likesRepo.RemoveLikeAsync(id);
-            return Ok("Agenda rimossa con successo");
+            return Ok("Like rimosso");
         }
         catch (Exception e)
         {
@@ -55,7 +55,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
     
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<ResLikesDTO>> GetListByUserIdAsync([Required] int id)
+    public async Task<ActionResult<List<ResLikesDTO>>> GetListByUserIdAsync([Required] int id)
     {
         try
         {
