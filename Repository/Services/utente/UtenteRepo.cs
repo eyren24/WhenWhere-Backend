@@ -98,14 +98,5 @@ public class UtenteRepo(AppDbContext _context, IMapper _mapper, ITokenService _t
         return _mapper.Map<ResUtenteDTO>(utente);
     }
     
-    public async Task<ResUtenteDTO> GetUtenteByUsernameAsync(string username)
-    {
-        var utente = await _context.Utente.FirstOrDefaultAsync(p=> p.username == username);
-        if (utente == null)
-        {
-            throw new Exception($"Utente {username} non trovato");
-        }
-
-        return _mapper.Map<ResUtenteDTO>(utente);
-    }
+    
 }

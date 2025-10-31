@@ -37,6 +37,20 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Utente)]
+    
+    public async Task<ActionResult<List<ResLikesDTO>>> GetLikeByAgendaIdAsync([Required] int id)
+    {
+        try
+        {
+            return Ok(await _likesRepo.GetLikeByAgendaIdAsync(id));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 
     [HttpDelete]
     [AuthorizeRole(ERuolo.Utente)]

@@ -19,6 +19,12 @@ public class LikesRepo(
         return _mapper.Map<ResLikesDTO>(query);
     }
 
+    public async Task<List<ResLikesDTO>> GetLikeByAgendaIdAsync(int id)
+    {
+        var query = _context.Likes.Where(p => p.agendaid == id);
+        return await query.Select(p => _mapper.Map<ResLikesDTO>(p)).ToListAsync();
+    }
+
     public async Task<int> AddLikeAsync(ReqLikesDTO likes)
     {
         var tokeninfo = _token.GetInfoToken();

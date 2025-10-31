@@ -72,18 +72,4 @@ public class UtenteController(IUtenteRepo _utenteRepo) : CustomController
         }
     }
 
-    [HttpGet]
-    [AllowAnonymous]
-    public async Task<ActionResult<ResUtenteDTO>> GetByUsername([Required] string username)
-    {
-        try
-        {
-            var res = await _utenteRepo.GetUtenteByUsernameAsync(username);
-            return Ok(res);
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
 }

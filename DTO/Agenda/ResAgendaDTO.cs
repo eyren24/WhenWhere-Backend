@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DTO.Likes;
 using DTO.Utente;
 
 namespace DTO.Agenda
@@ -15,5 +16,8 @@ namespace DTO.Agenda
 
         [StringLength(50)] [Required] public string tema { get; set; } = null!;
         [Required] public bool isprivate { get; set; } = false;
+
+        [Required] public List<ResLikesDTO> likes { get; set; } = null!;
+        [Required] public ResUtenteDTO utente { get; set; } = null!;
     }
 }

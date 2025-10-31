@@ -12,7 +12,6 @@ public class ResSocialDTO
     [Column(TypeName = "text")] public string? descrizione { get; set; } = null;
     [StringLength(50)] [Required] public string tema { get; set; } = null!;
     [Required] public bool isprivate { get; set; } = false;
-    [Required] public ResUtenteDTO utente = null!;
-    
+    [Required] public ResUtenteDTO utente { get; set; } = null!;
     [Required] public int likesCount { get; set; }
 }

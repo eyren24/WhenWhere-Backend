@@ -54,8 +54,12 @@ public class AgendaRepo(
 
     public async Task<List<ResAgendaDTO>> GetListAsync()
     {
-        var query = _context.Agenda.AsQueryable();
-        return await query
+        var tokeninfo = _token.GetInfoToken();
+        if (tokeninfo == null)
+            throw new Exception("Token non valido");
+        return await _context.Agenda
+            .Where(a => a.utenteId == tokeninfo.utenteId)
+            .Include(a => a.utente)
             .Select(a => _mapper.Map<ResAgendaDTO>(a))
             .ToListAsync();
     }
@@ -72,16 +76,16 @@ public class AgendaRepo(
         return _mapper.Map<ResAgendaDTO>(agenda);
     }
 
-    public async Task<ResAgendaDTO> GetByOwner(string username)
+    public async Task<List<ResAgendaDTO>> GetByOwner(string username)
     {
-        var agenda = await _context.Agenda.Include(t => t.utente)
-            .FirstOrDefaultAsync(p => p.utente.username == username);
+        var agenda = _context.Agenda.Include(t => t.utente)
+            .Where(p => p.utente.username == username);
         if (agenda == null)
         {
             throw new Exception
                 ($"Agenda con proprietario {username} non trovata");
         }
 
-        return _mapper.Map<ResAgendaDTO>(agenda);
+        return await agenda.Select(p=> _mapper.Map<ResAgendaDTO>(p)).ToListAsync();
     }
 }

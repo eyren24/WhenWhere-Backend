@@ -53,20 +53,23 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpPut]
+    [HttpPut("Update")]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> UpdateAsync([Required] int agendaId, ReqUpdateAgenda agenda)
+    public async Task<ActionResult> UpdateAsync(
+        [FromQuery] [Required] int agendaId,
+        [FromBody] [Required] ReqUpdateAgenda agenda)
     {
         try
         {
             await _agendaRepo.UpdateAsync(agendaId, agenda);
-            return Ok("Agenda aggiornata");
+            return Ok(new { message = "Agenda aggiornata" });
         }
         catch (Exception e)
         {
-            return BadRequest(e.Message);
+            return BadRequest(new { error = e.Message });
         }
     }
+
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<ResAgendaDTO>> GetByIdAsync([Required] int agendaId)
@@ -80,9 +83,10 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
+
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<ResAgendaDTO>> GetByOwner([Required] string username)
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetByOwner([Required] string username)
     {
         try
         {
