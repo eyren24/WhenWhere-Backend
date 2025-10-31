@@ -10,7 +10,7 @@ using WhenWhereBackend.DecoratoriCustom;
 
 namespace WhenWhereBackend.controllers;
 
-public class UtenteController(IUtenteRepo _utenteRepo) : ControllerBase
+public class UtenteController(IUtenteRepo _utenteRepo) : CustomController
 {
     [HttpGet]
     [AuthorizeRole(ERuolo.Amministratore)]

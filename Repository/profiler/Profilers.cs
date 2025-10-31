@@ -4,6 +4,7 @@ using DTO.Agenda;
 using DTO.Auth;
 using DTO.Evento;
 using DTO.Likes;
+using DTO.social;
 using DTO.Tag;
 using DTO.Utente;
 
@@ -17,6 +18,7 @@ public class Profilers : Profile
 
         CreateMap<ReqAgendaDTO, Agenda>().ReverseMap();
         CreateMap<ResAgendaDTO, Agenda>().ReverseMap();
+        CreateMap<ResSocialDTO, Agenda>().ReverseMap();
 
         #endregion
 

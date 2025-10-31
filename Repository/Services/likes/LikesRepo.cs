@@ -13,12 +13,10 @@ public class LikesRepo(
     IMapper _mapper,
     ITokenService _token) : ILikesRepo
 {
-    public async Task<List<ResLikesDTO>> GetallLikesasync(int id)
+    public async Task<ResLikesDTO> GetLikeByIdAsync(int id)
     {
-        var query = _context.Likes.Where(e => e.id == id).AsQueryable();
-        return await query
-            .Select(a => _mapper.Map<ResLikesDTO>(a))
-            .ToListAsync();
+        var query = _context.Likes.FindAsync(id);
+        return _mapper.Map<ResLikesDTO>(query);
     }
 
     public async Task<int> AddLikeAsync(ReqLikesDTO likes)

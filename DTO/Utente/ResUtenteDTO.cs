@@ -17,6 +17,8 @@ namespace DTO.Utente
 
         [StringLength(50)]
         public string email { get; set; } = null!;
+        
+        public string username { get; set; } = null!;
 
         public string password { get; set; } = null!;
 

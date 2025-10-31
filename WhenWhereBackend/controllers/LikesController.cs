@@ -26,11 +26,11 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
     
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResLikesDTO>>> GetAllAsync(int id)
+    public async Task<ActionResult<ResLikesDTO>> GetLikeByIdAsync(int id)
     {
         try
         {
-            return Ok(await _likesRepo.GetallLikesasync(id));
+            return Ok(await _likesRepo.GetLikeByIdAsync(id));
         }
         catch (Exception e)
         {
