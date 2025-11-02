@@ -56,13 +56,11 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<Likes>(entity =>
         {
-            entity.Property(e => e.id).ValueGeneratedOnAdd();
-
-            entity.HasOne(d => d.agenda).WithMany()
+            entity.HasOne(d => d.agenda).WithMany(p => p.Likes)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Likes_Agenda");
 
-            entity.HasOne(d => d.utente).WithMany()
+            entity.HasOne(d => d.utente).WithMany(p => p.Likes)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Likes_Utente");
         });

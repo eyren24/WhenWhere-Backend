@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Database.Models;
 
-[Keyless]
 public partial class Likes
 {
+    [Key]
     public int id { get; set; }
 
     public int utenteid { get; set; }
@@ -16,8 +16,10 @@ public partial class Likes
     public int agendaid { get; set; }
 
     [ForeignKey("agendaid")]
+    [InverseProperty("Likes")]
     public virtual Agenda agenda { get; set; } = null!;
 
     [ForeignKey("utenteid")]
+    [InverseProperty("Likes")]
     public virtual Utente utente { get; set; } = null!;
 }

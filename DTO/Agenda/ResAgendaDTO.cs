@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DTO.Evento;
 using DTO.Likes;
+using DTO.Nota;
 using DTO.Utente;
 
 namespace DTO.Agenda
@@ -19,5 +21,7 @@ namespace DTO.Agenda
 
         [Required] public List<ResLikesDTO> likes { get; set; } = null!;
         [Required] public ResUtenteDTO utente { get; set; } = null!;
+        [Required] public List<ResEventoDTO> eventi { get; set; } = null!;
+        [Required] public List<ResNotaDTO> note { get; set; } = null!;
     }
 }

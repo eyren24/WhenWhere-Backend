@@ -39,6 +39,7 @@ public class AgendaRepo(
         modello.nomeAgenda = agendaUpdt.nomeAgenda;
         modello.descrizione = agendaUpdt.descrizione;
         modello.tema = agendaUpdt.tema;
+        modello.isprivate = agendaUpdt.isprivate;
 
         await _context.SaveChangesAsync();
     }
@@ -60,6 +61,8 @@ public class AgendaRepo(
         return await _context.Agenda
             .Where(a => a.utenteId == tokeninfo.utenteId)
             .Include(a => a.utente)
+            .Include(p => p.Evento)
+            .Include(p => p.Nota)
             .Select(a => _mapper.Map<ResAgendaDTO>(a))
             .ToListAsync();
     }
@@ -74,18 +77,5 @@ public class AgendaRepo(
         }
 
         return _mapper.Map<ResAgendaDTO>(agenda);
-    }
-
-    public async Task<List<ResAgendaDTO>> GetByOwner(string username)
-    {
-        var agenda = _context.Agenda.Include(t => t.utente)
-            .Where(p => p.utente.username == username);
-        if (agenda == null)
-        {
-            throw new Exception
-                ($"Agenda con proprietario {username} non trovata");
-        }
-
-        return await agenda.Select(p=> _mapper.Map<ResAgendaDTO>(p)).ToListAsync();
     }
 }

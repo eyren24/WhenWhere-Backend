@@ -27,6 +27,9 @@ public partial class Agenda
     public virtual ICollection<Evento> Evento { get; set; } = new List<Evento>();
 
     [InverseProperty("agenda")]
+    public virtual ICollection<Likes> Likes { get; set; } = new List<Likes>();
+
+    [InverseProperty("agenda")]
     public virtual ICollection<Nota> Nota { get; set; } = new List<Nota>();
 
     [ForeignKey("utenteId")]

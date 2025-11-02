@@ -52,5 +52,8 @@ public partial class Utente
     public virtual ICollection<Agenda> Agenda { get; set; } = new List<Agenda>();
 
     [InverseProperty("utente")]
+    public virtual ICollection<Likes> Likes { get; set; } = new List<Likes>();
+
+    [InverseProperty("utente")]
     public virtual ICollection<RefreshToken> RefreshToken { get; set; } = new List<RefreshToken>();
 }

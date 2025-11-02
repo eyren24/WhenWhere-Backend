@@ -84,17 +84,4 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResAgendaDTO>>> GetByOwner([Required] string username)
-    {
-        try
-        {
-            return Ok(await _agendaRepo.GetByOwner(username));
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
 }

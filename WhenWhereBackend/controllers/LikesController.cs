@@ -23,7 +23,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
-    
+
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<ResLikesDTO>> GetLikeByIdAsync(int id)
@@ -37,9 +37,9 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
+
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    
     public async Task<ActionResult<List<ResLikesDTO>>> GetLikeByAgendaIdAsync([Required] int id)
     {
         try
@@ -66,7 +66,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
-    
+
     [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<List<ResLikesDTO>>> GetListByUserIdAsync([Required] int id)
@@ -74,6 +74,20 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
         try
         {
             return Ok(await _likesRepo.GetListByUserIdAsync(id));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<bool>> GetIfUserLikeAgenda(int agendaId)
+    {
+        try
+        {
+            return Ok(await _likesRepo.GetIfUserLikeAgenda(agendaId));
         }
         catch (Exception e)
         {

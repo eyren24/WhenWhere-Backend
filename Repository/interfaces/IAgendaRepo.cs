@@ -10,5 +10,4 @@ public interface IAgendaRepo
     Task RemoveAsync(int agendaId);
     Task<List<ResAgendaDTO>> GetListAsync();
     Task<ResAgendaDTO> GetById(int id);
-    Task<List<ResAgendaDTO>> GetByOwner(string username);
 }

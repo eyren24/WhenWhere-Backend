@@ -55,6 +55,18 @@ public class SocialRepo(AppDbContext _context, IMapper _mapper) : ISocialRepo
 
         return agendePubbliche;
     }
+ 
+    public async Task<List<ResSocialDTO>> GetByOwner(string username)
+    {
+        var agenda = _context.Agenda.Include(t => t.utente)
+            .Where(p => p.utente.username == username && !p.isprivate);
+        if (agenda == null)
+        {
+            throw new Exception
+                ($"Agenda con proprietario {username} non trovata");
+        }
 
+        return await agenda.Select(p=> _mapper.Map<ResSocialDTO>(p)).ToListAsync();
+    }
     
 }

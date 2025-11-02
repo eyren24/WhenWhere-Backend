@@ -10,6 +10,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers()
+    .AddJsonOptions(opts =>
+    {
+        opts.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+        opts.JsonSerializerOptions.WriteIndented = true;
+    });
 
 builder.WebHost.ConfigureKestrel(options =>
 {
