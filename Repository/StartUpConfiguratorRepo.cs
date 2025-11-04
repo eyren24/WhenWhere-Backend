@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Repository.interfaces;
 using Repository.profiler;
+using Repository.Services.admin;
 using Repository.Services.agenda;
 using Repository.services.auth;
 using Repository.services.evento;
@@ -61,6 +62,11 @@ public static class StartUpConfiguratorRepo
         #region Social
 
         services.AddScoped<ISocialRepo, SocialRepo>();
+
+        #endregion
+        #region Admin
+
+        services.AddScoped<IAdminRepo, AdminRepo>();
 
         #endregion
     }

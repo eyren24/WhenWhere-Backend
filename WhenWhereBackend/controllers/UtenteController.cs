@@ -12,9 +12,9 @@ namespace WhenWhereBackend.controllers;
 
 public class UtenteController(IUtenteRepo _utenteRepo) : CustomController
 {
-    [HttpGet]
+    [HttpPost]
     [AuthorizeRole(ERuolo.Amministratore)]
-    public async Task<ActionResult<List<ResUtenteDTO>>> GetAllAsync([Required] int agendaId, FiltriUtenteDTO filtri)
+    public async Task<ActionResult<List<ResUtenteDTO>>> GetAllAsync([FromBody] FiltriUtenteDTO filtri)
     {
         try
         {
@@ -28,7 +28,7 @@ public class UtenteController(IUtenteRepo _utenteRepo) : CustomController
 
     [HttpDelete]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResUtenteDTO>>> ToggleStatusAsync([Required] int utenteId)
+    public async Task<ActionResult<string>> ToggleStatusAsync([Required] int utenteId)
     {
         try
         {

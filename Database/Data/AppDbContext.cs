@@ -85,6 +85,7 @@ public partial class AppDbContext : DbContext
 
         modelBuilder.Entity<Utente>(entity =>
         {
+            entity.Property(e => e.dataCreazione).HasDefaultValueSql("(getdate())");
             entity.Property(e => e.fotoProfilo).HasDefaultValue("default.png");
             entity.Property(e => e.lastLogin).HasDefaultValueSql("(getdate())");
             entity.Property(e => e.preferenzeNotifiche).HasDefaultValue(true);

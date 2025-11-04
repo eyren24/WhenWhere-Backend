@@ -48,6 +48,9 @@ public partial class Utente
     [StringLength(50)]
     public string username { get; set; } = null!;
 
+    [Column(TypeName = "datetime")]
+    public DateTime dataCreazione { get; set; }
+
     [InverseProperty("utente")]
     public virtual ICollection<Agenda> Agenda { get; set; } = new List<Agenda>();
 

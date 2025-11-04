@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Database.Models;
+using DTO.admin;
 using DTO.Agenda;
 using DTO.Auth;
 using DTO.Evento;
@@ -64,6 +65,13 @@ public class Profilers : Profile
 
         CreateMap<ReqLikesDTO, Likes>().ReverseMap();
         CreateMap<ResLikesDTO, Likes>().ReverseMap();
+
+        #endregion
+
+        #region Admin
+
+        CreateMap<ResAdminStatsDTO, Utente>().ReverseMap();
+
 
         #endregion
     }

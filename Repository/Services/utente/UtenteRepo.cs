@@ -52,18 +52,6 @@ public class UtenteRepo(AppDbContext _context, IMapper _mapper, ITokenService _t
 
     public async Task<List<ResUtenteDTO>> GetListAsync(FiltriUtenteDTO filtri)
     {
-        var tokenInfo = _token.GetInfoToken();
-        if (tokenInfo == null)
-        {
-            throw new Exception("Token non valido");
-        }
-
-        if (tokenInfo.ruolo != ERuolo.Amministratore)
-        {
-            throw new Exception("Accesso  autorizzato solo agli amministratori");
-        }
-
-        //filtri
         var query = _context.Utente.AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(filtri.nome))
@@ -81,8 +69,11 @@ public class UtenteRepo(AppDbContext _context, IMapper _mapper, ITokenService _t
             query = query.Where(u => u.email.Contains(filtri.email));
         }
 
-        query = query.Where(u => u.statoAccount == filtri.statoAccount);
-        //lista filtrata
+        if (filtri.statoAccount != null)
+        {
+            query = query.Where(u => u.statoAccount == filtri.statoAccount);
+        }
+
         var utenti = await query.Select((ute) => _mapper.Map<ResUtenteDTO>(ute)).ToListAsync();
         return utenti;
     }
@@ -97,6 +88,4 @@ public class UtenteRepo(AppDbContext _context, IMapper _mapper, ITokenService _t
 
         return _mapper.Map<ResUtenteDTO>(utente);
     }
-    
-    
 }

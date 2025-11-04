@@ -24,7 +24,7 @@ public class AuthRepository(AppDbContext _context, IMapper _mapper) : IAuthRepos
 
         newUser.password = BCrypt.Net.BCrypt.HashPassword(newUser.password);
         var modello = _mapper.Map<Utente>(newUser);
-
+        modello.lastLogin = DateTime.Now;
         await _context.AddAsync(modello);
         await _context.SaveChangesAsync();
 
@@ -37,6 +37,9 @@ public class AuthRepository(AppDbContext _context, IMapper _mapper) : IAuthRepos
         var utente = await _context.Utente.SingleOrDefaultAsync(p => p.email == request.email);
         if (utente == null || !BCrypt.Net.BCrypt.Verify(request.password, utente.password))
             throw new Exception("Email o Password errata.");
+        utente.lastLogin = DateTime.Now;
+        _context.Update(utente);
+        await _context.SaveChangesAsync();
 
         return new TokenInfoDTO
             { nomeCompleto = $"{utente.nome} {utente.cognome}", utenteId = utente.id, ruolo = (ERuolo)utente.ruoloId };
@@ -91,5 +94,4 @@ public class AuthRepository(AppDbContext _context, IMapper _mapper) : IAuthRepos
             await _context.RefreshToken.Where(r => r.dataScadenza < DateTime.Now).ToListAsync();
         _context.RemoveRange(toRemove);
     }
-
 }
