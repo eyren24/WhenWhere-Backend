@@ -1,53 +1,56 @@
-﻿using AutoMapper;
-using Database.Models;
-using DTO.Agenda;
-using DTO.Auth;
-using DTO.Evento;
-using DTO.Likes;
-using DTO.social;
-using DTO.Tag;
-using DTO.Utente;
+﻿    using AutoMapper;
+    using Database.Models;
+    using DTO.Agenda;
+    using DTO.Auth;
+    using DTO.Evento;
+    using DTO.Likes;
+    using DTO.social;
+    using DTO.Tag;
+    using DTO.Utente;
 
-namespace Repository.profiler;
+    namespace Repository.profiler;
 
-public class Profilers : Profile
-{
-    public Profilers()
+    public class Profilers : Profile
     {
-        #region Agenda
+        public Profilers()
+        {
+            #region Agenda
 
-        CreateMap<ReqAgendaDTO, Agenda>().ReverseMap();
-        CreateMap<ResAgendaDTO, Agenda>().ReverseMap();
-        CreateMap<ResSocialDTO, Agenda>().ReverseMap();
+            CreateMap<ReqAgendaDTO, Agenda>().ReverseMap();
+            CreateMap<ResAgendaDTO, Agenda>().ReverseMap();
+            CreateMap<Agenda, ResSocialDTO>()
+                .ForMember(dest => dest.likesCount, opt => opt.MapFrom(src => src.Likes.Count))
+                .ForMember(dest => dest.utente, opt => opt.MapFrom(src => src.utente))
+                .ReverseMap();
 
-        #endregion
+            #endregion
 
-        #region Evento
+            #region Evento
 
-        CreateMap<ReqEventoDTO, Evento>().ReverseMap();
-        CreateMap<ResEventoDTO, Evento>().ReverseMap();
+            CreateMap<ReqEventoDTO, Evento>().ReverseMap();
+            CreateMap<ResEventoDTO, Evento>().ReverseMap();
 
-        #endregion
+            #endregion
 
-        #region Auth
+            #region Auth
 
-        CreateMap<ReqRegisterUser, Utente>().ReverseMap();
-        CreateMap<ResUtenteDTO, Utente>().ReverseMap();
-        CreateMap<ReqLoginUser, Utente>().ReverseMap();
+            CreateMap<ReqRegisterUser, Utente>().ReverseMap();
+            CreateMap<ResUtenteDTO, Utente>().ReverseMap();
+            CreateMap<ReqLoginUser, Utente>().ReverseMap();
 
-        #endregion
+            #endregion
 
-        #region Tags
+            #region Tags
 
-        CreateMap<ResTagDTO, Tag>().ReverseMap();
+            CreateMap<ResTagDTO, Tag>().ReverseMap();
 
-        #endregion
+            #endregion
 
-        #region Likes
+            #region Likes
 
-        CreateMap<ReqLikesDTO, Likes>().ReverseMap();
-        CreateMap<ResLikesDTO, Likes>().ReverseMap();
+            CreateMap<ReqLikesDTO, Likes>().ReverseMap();
+            CreateMap<ResLikesDTO, Likes>().ReverseMap();
 
-        #endregion
+            #endregion
+        }
     }
-}

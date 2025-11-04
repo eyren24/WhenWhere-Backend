@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Auth.dto;
 using DTO.Likes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.interfaces;
 using WhenWhereBackend.DecoratoriCustom;
@@ -25,7 +26,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
     }
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
+    [AllowAnonymous]
     public async Task<ActionResult<ResLikesDTO>> GetLikeByIdAsync(int id)
     {
         try
@@ -39,7 +40,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
     }
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
+    [AllowAnonymous]
     public async Task<ActionResult<List<ResLikesDTO>>> GetLikeByAgendaIdAsync([Required] int id)
     {
         try
@@ -68,7 +69,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
     }
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
+    [AllowAnonymous]
     public async Task<ActionResult<List<ResLikesDTO>>> GetListByUserIdAsync([Required] int id)
     {
         try
@@ -82,7 +83,7 @@ public class LikesController(ILikesRepo _likesRepo) : CustomController
     }
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
+    [AllowAnonymous]
     public async Task<ActionResult<bool>> GetIfUserLikeAgenda(int agendaId)
     {
         try

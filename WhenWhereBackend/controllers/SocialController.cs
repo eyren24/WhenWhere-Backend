@@ -13,14 +13,6 @@ namespace WhenWhereBackend.controllers;
 public class SocialController(ISocialRepo _socialRepo) : CustomController
 {
     [HttpGet]
-    public async Task<ActionResult<List<ResSocialDTO>>> ListTopAgendeAsync()
-    {
-        var res = await _socialRepo.ListTopAgendeAsync();
-        return Ok(res);
-    }
-
-
-    [HttpGet]
     [AllowAnonymous]
     public async Task<ActionResult<ResUtenteDTO>> GetUtenteByUsernameAsync([Required] string username)
     {
@@ -34,19 +26,6 @@ public class SocialController(ISocialRepo _socialRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
-    
-    
-    [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResSocialDTO>>> GetByOwner([Required] string username)
-    {
-        try
-        {
-            return Ok(await _socialRepo.GetByOwner(username));
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
+
+
 }

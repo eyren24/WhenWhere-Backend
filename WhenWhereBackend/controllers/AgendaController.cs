@@ -7,11 +7,13 @@ using WhenWhereBackend.DecoratoriCustom;
 
 namespace WhenWhereBackend.controllers;
 
+[Route("api/[controller]")]
+[ApiController]
 public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 {
-    [HttpPost]
+    [HttpPost("AddAgenda")]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> AddAgenda([Required] ReqAgendaDTO agenda)
+    public async Task<ActionResult> AddAgenda([FromBody][Required] ReqAgendaDTO agenda)
     {
         try
         {
@@ -24,40 +26,11 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet]
+    [HttpPut("UpdateAgenda")]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResAgendaDTO>>> GetAllAsync()
-    {
-        try
-        {
-            return Ok(await _agendaRepo.GetListAsync());
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
-
-    [HttpDelete]
-    [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> RemoveAsync([Required] int agendaId)
-    {
-        try
-        {
-            await _agendaRepo.RemoveAsync(agendaId);
-            return Ok("Agenda rimossa con successo");
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
-    }
-
-    [HttpPut("Update")]
-    [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> UpdateAsync(
-        [FromQuery] [Required] int agendaId,
-        [FromBody] [Required] ReqUpdateAgenda agenda)
+    public async Task<ActionResult> UpdateAgenda(
+        [FromQuery][Required] int agendaId,
+        [FromBody][Required] ReqUpdateAgenda agenda)
     {
         try
         {
@@ -70,9 +43,76 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet]
+    [HttpDelete("RemoveAgenda")]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<ResAgendaDTO>> GetByIdAsync([Required] int agendaId)
+    public async Task<ActionResult> RemoveAgenda([FromQuery][Required] int agendaId)
+    {
+        try
+        {
+            await _agendaRepo.RemoveAsync(agendaId);
+            return Ok("Agenda rimossa con successo");
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("GetPersonalAgenda")]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetPersonalAgenda()
+    {
+        try
+        {
+            return Ok(await _agendaRepo.GetPersonalAgenda());
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("GetAllAgende")]
+    [AuthorizeRole(ERuolo.Amministratore, ERuolo.Utente)]
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetAllAgende()
+    {
+        try
+        {
+            return Ok(await _agendaRepo.GetAll());
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("ListTopAgende")]
+    public async Task<ActionResult<List<ResAgendaDTO>>> ListTopAgende()
+    {
+        try
+        {
+            var res = await _agendaRepo.ListTopAgendeAsync();
+            return Ok(res);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+        /*todo:
+         
+    Task<List<ResAgendaDTO>> GetUserLikes();
+    
+    
+    byAgendaId: (ganedaId: number) => Promise<{ success: boolean, likes?: ResLikesDTO[], error?: string }>;
+         
+         
+         */
+        
+        
+    [HttpGet("GetById")]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<ResAgendaDTO>> GetById([FromQuery][Required] int agendaId)
     {
         try
         {
@@ -84,4 +124,17 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
+    [HttpGet("GetByOwner")]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetByOwner([FromQuery][Required] string username)
+    {
+        try
+        {
+            return Ok(await _agendaRepo.GetByOwner(username));
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }
