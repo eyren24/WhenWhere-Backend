@@ -12,6 +12,6 @@ public interface IAgendaRepo
     Task<ResAgendaDTO> GetById(int id);
     Task<List<ResAgendaDTO>> GetAll();
     Task<List<ResAgendaDTO>> ListTopAgendeAsync();
-    
+    Task<List<ResAgendaDTO>> GetAllLiked();
     Task<List<ResAgendaDTO>> GetByOwner(string username);
 }

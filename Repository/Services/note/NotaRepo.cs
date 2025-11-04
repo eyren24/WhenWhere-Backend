@@ -27,7 +27,7 @@ public class NotaRepo(
         return modello.id;
     }
     
-    public async Task UpdateAsync(int id, ReqNotaDTO notaUpdt)
+    public async Task UpdateAsync(int id, ReqUpdateNotaDTO notaUpdt)
     {
         var modello = await _context.Nota.FirstOrDefaultAsync(p => p.id == id);
         if (modello == null)

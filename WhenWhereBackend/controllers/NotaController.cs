@@ -51,7 +51,7 @@ public class NotaController(INotaRepo _notaRepo) : CustomController
         }
     }
     [HttpPut] [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResNotaDTO>>> UpdateAsync([Required] int notaId, [Required] ReqNotaDTO nota)
+    public async Task<ActionResult<List<ResNotaDTO>>> UpdateAsync([Required] int notaId, [Required]ReqUpdateNotaDTO nota)
     {
         try
         {

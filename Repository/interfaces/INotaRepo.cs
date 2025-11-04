@@ -7,7 +7,7 @@ namespace Repository.interfaces;
 public interface INotaRepo
 {
     Task<int> AddAsync(ReqNotaDTO nota);
-    Task UpdateAsync(int id, ReqNotaDTO notaUpdt);
+    Task UpdateAsync(int id, ReqUpdateNotaDTO notaUpdt);
     Task RemoveAsync(int notaId);
 
     Task<List<ResNotaDTO>> GetListAsync([Required] int agendaId, FiltriAgendaDTO filtri);

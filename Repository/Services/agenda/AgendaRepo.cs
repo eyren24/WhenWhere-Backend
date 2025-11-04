@@ -102,6 +102,26 @@ public class AgendaRepo(AppDbContext _context, IMapper _mapper, ITokenService _t
         }).ToList();
     }
 
+    // --- Tutte le agende che hai messo like ---
+    public async Task<List<ResAgendaDTO>> GetAllLiked()
+    {
+        var tokeninfo = _token.GetInfoToken();
+        if (tokeninfo == null)
+            throw new Exception("Token non valido");
+
+        var agendeLiked = await BaseAgendaQuery()
+            .Where(a => a.Likes.Any(l => l.utenteid == tokeninfo.utenteId))
+            .ToListAsync();
+
+        return agendeLiked.Select(a =>
+        {
+            var dto = _mapper.Map<ResAgendaDTO>(a);
+            dto.likesCount = a.Likes.Count;
+            dto.hasLiked = true; // l’utente ha già messo like
+            return dto;
+        }).ToList();
+    }
+
     // --- Top 10 agende per like ---
     public async Task<List<ResAgendaDTO>> ListTopAgendeAsync()
     {

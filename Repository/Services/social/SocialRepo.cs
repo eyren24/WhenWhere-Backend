@@ -4,6 +4,7 @@ using DTO.Agenda;
 using DTO.social;
 using DTO.Utente;
 using Microsoft.EntityFrameworkCore;
+using Repository.interfaces;
 
 namespace Repository.services.social;
 

@@ -27,10 +27,6 @@ public class ReqEventoDTO
 
     [Required] public bool notifica { get; set; }
 
-    [Required]
-    [Column(TypeName = "datetime")]
-    public DateTime dataCreazione { get; set; }
-
     [Required] [StringLength(50)] public string titolo { get; set; } = null!;
 
     [Required] public int tagId { get; set; }

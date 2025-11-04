@@ -1,7 +1,6 @@
-﻿using DTO.Agenda;
 using DTO.social;
 
-namespace Repository.services.social;
+namespace Repository.interfaces;
 
 public interface ISocialRepo
 {

@@ -7,13 +7,11 @@ using WhenWhereBackend.DecoratoriCustom;
 
 namespace WhenWhereBackend.controllers;
 
-[Route("api/[controller]")]
-[ApiController]
 public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 {
-    [HttpPost("AddAgenda")]
+    [HttpPost]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> AddAgenda([FromBody][Required] ReqAgendaDTO agenda)
+    public async Task<ActionResult> AddAgenda([FromBody] [Required] ReqAgendaDTO agenda)
     {
         try
         {
@@ -26,11 +24,11 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpPut("UpdateAgenda")]
+    [HttpPut]
     [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult> UpdateAgenda(
-        [FromQuery][Required] int agendaId,
-        [FromBody][Required] ReqUpdateAgenda agenda)
+        [FromQuery] [Required] int agendaId,
+        [FromBody] [Required] ReqUpdateAgenda agenda)
     {
         try
         {
@@ -43,9 +41,9 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpDelete("RemoveAgenda")]
+    [HttpDelete]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult> RemoveAgenda([FromQuery][Required] int agendaId)
+    public async Task<ActionResult> RemoveAgenda([FromQuery] [Required] int agendaId)
     {
         try
         {
@@ -58,7 +56,7 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet("GetPersonalAgenda")]
+    [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<List<ResAgendaDTO>>> GetPersonalAgenda()
     {
@@ -72,7 +70,7 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet("GetAllAgende")]
+    [HttpGet]
     [AuthorizeRole(ERuolo.Amministratore, ERuolo.Utente)]
     public async Task<ActionResult<List<ResAgendaDTO>>> GetAllAgende()
     {
@@ -86,7 +84,7 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet("ListTopAgende")]
+    [HttpGet]
     public async Task<ActionResult<List<ResAgendaDTO>>> ListTopAgende()
     {
         try
@@ -99,20 +97,25 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
             return BadRequest(e.Message);
         }
     }
-        /*todo:
-         
-    Task<List<ResAgendaDTO>> GetUserLikes();
-    
-    
-    byAgendaId: (ganedaId: number) => Promise<{ success: boolean, likes?: ResLikesDTO[], error?: string }>;
-         
-         
-         */
-        
-        
-    [HttpGet("GetById")]
+
+    [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<ResAgendaDTO>> GetById([FromQuery][Required] int agendaId)
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetAllLiked()
+    {
+        try
+        {
+            return Ok(await _agendaRepo.GetAllLiked());
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Utente)]
+    public async Task<ActionResult<ResAgendaDTO>> GetById([FromQuery] [Required] int agendaId)
     {
         try
         {
@@ -124,9 +127,9 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
         }
     }
 
-    [HttpGet("GetByOwner")]
+    [HttpGet]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResAgendaDTO>>> GetByOwner([FromQuery][Required] string username)
+    public async Task<ActionResult<List<ResAgendaDTO>>> GetByOwner([FromQuery] [Required] string username)
     {
         try
         {

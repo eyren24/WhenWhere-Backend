@@ -70,8 +70,6 @@ public class EventoRepo(AppDbContext _context, IMapper _mapper) : IEventoRepo
         {
             evento.dataFine = DateTime.SpecifyKind(evento.dataFine.Value, DateTimeKind.Utc);
         }
-
-        evento.dataCreazione = DateTime.SpecifyKind(evento.dataCreazione, DateTimeKind.Utc);
         var modello = _mapper.Map<Evento>(evento);
         await _context.Evento.AddAsync(modello);
         await _context.SaveChangesAsync();
