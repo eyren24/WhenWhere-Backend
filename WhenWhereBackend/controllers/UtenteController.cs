@@ -43,7 +43,7 @@ public class UtenteController(IUtenteRepo _utenteRepo) : CustomController
 
     [HttpPut]
     [AuthorizeRole(ERuolo.Utente)]
-    public async Task<ActionResult<List<ResUtenteDTO>>> UpdateAsync([Required] int utenteId,
+    public async Task<ActionResult<string>> UpdateAsync([Required] int utenteId,
         [Required] ReqUpdateUtenteDTO utente)
     {
         try

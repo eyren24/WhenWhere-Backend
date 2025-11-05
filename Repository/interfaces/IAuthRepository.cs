@@ -9,4 +9,5 @@ public interface IAuthRepository
     Task<TokenInfoDTO> LoginAsync(ReqLoginUser request);
     Task<string> GenerateRefreshTokenAsync(int utenteId, int length = 255);
     Task<(TokenInfoDTO? tokenInfo, string? newRefreshToken)> RefreshTokenAsync(string oldToken);
+    Task<string> VerifyTokenAsync(string email, string token);
 }

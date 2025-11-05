@@ -7,6 +7,9 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Repository.interfaces;
+using Repository.services.mail;
+using WhenWhereBackend;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +19,9 @@ builder.Services.AddControllers()
         opts.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
         opts.JsonSerializerOptions.WriteIndented = true;
     });
+
+builder.Services.AddScoped<IMailTrapRepository, MailTrapRepository>();
+builder.Services.AddHostedService<EventReminderJob>();
 
 builder.WebHost.ConfigureKestrel(options =>
 {

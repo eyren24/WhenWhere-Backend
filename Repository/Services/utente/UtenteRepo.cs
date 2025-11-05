@@ -21,7 +21,6 @@ public class UtenteRepo(AppDbContext _context, IMapper _mapper, ITokenService _t
 
         modello.nome = utenteUpdate.nome;
         modello.cognome = utenteUpdate.cognome;
-        modello.fotoProfilo = utenteUpdate.fotoProfilo;
         modello.preferenzeNotifiche = utenteUpdate.preferenzeNotifiche;
         _context.Utente.Update(modello);
         await _context.SaveChangesAsync();

@@ -1,4 +1,5 @@
-﻿using Auth.dto;
+﻿using System.Security.Cryptography;
+using Auth.dto;
 using AutoMapper;
 using Database.Data;
 using Database.Models;
@@ -8,7 +9,7 @@ using Repository.interfaces;
 
 namespace Repository.services.auth;
 
-public class AuthRepository(AppDbContext _context, IMapper _mapper) : IAuthRepository
+public class AuthRepository(AppDbContext _context, IMapper _mapper, IMailTrapRepository _mailer) : IAuthRepository
 {
     private readonly Random random = new();
     private readonly string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -25,9 +26,11 @@ public class AuthRepository(AppDbContext _context, IMapper _mapper) : IAuthRepos
         newUser.password = BCrypt.Net.BCrypt.HashPassword(newUser.password);
         var modello = _mapper.Map<Utente>(newUser);
         modello.lastLogin = DateTime.Now;
+        modello.token = GeneraCodiceVerifica();
+        modello.tokenExpiration = DateTime.Now.AddMinutes(5);
         await _context.AddAsync(modello);
         await _context.SaveChangesAsync();
-
+        await _mailer.SendWelcomeMailAsync(modello.email, modello.nome + modello.cognome, modello.token);
         return new TokenInfoDTO
             { nomeCompleto = $"{modello.nome} {modello.cognome}", utenteId = modello.id, ruolo = ERuolo.Utente };
     }
@@ -88,10 +91,36 @@ public class AuthRepository(AppDbContext _context, IMapper _mapper) : IAuthRepos
             newRefreshToken);
     }
 
+    public async Task<string> VerifyTokenAsync(string email, string token)
+    {
+        var utente = await _context.Utente.SingleOrDefaultAsync(p => p.email == email && p.token == token);
+        if (utente == null)
+        {
+            throw new Exception("Token non valido.");
+        }
+
+        if (utente.tokenExpiration < DateTime.Now)
+        {
+            throw new Exception("Token scaduto.");
+        }
+
+        utente.token = null;
+        utente.tokenExpiration = null;
+        await _context.SaveChangesAsync();
+        return "Token validato! Il tuo account è ora verificato!";
+    }
+
     private async Task RemoveExpiredRefreshTokens()
     {
         List<RefreshToken> toRemove =
             await _context.RefreshToken.Where(r => r.dataScadenza < DateTime.Now).ToListAsync();
         _context.RemoveRange(toRemove);
+    }
+
+    private static string GeneraCodiceVerifica()
+    {
+        var bytes = new byte[3];
+        RandomNumberGenerator.Fill(bytes);
+        return BitConverter.ToString(bytes).Replace("-", "").ToUpper();
     }
 }

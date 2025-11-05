@@ -52,6 +52,7 @@ public class Profilers : Profile
         CreateMap<ReqRegisterUser, Utente>().ReverseMap();
         CreateMap<ResUtenteDTO, Utente>().ReverseMap();
         CreateMap<ReqLoginUser, Utente>().ReverseMap();
+        CreateMap<ReqUpdateUtenteDTO, Utente>().ReverseMap();
 
         #endregion
 
@@ -71,7 +72,6 @@ public class Profilers : Profile
         #region Admin
 
         CreateMap<ResAdminStatsDTO, Utente>().ReverseMap();
-
 
         #endregion
     }

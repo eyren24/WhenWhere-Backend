@@ -5,14 +5,10 @@ namespace DTO.Utente;
 
 public class ReqUpdateUtenteDTO
 {
+    [StringLength(50)] [Required] public string nome { get; set; } = null!;
 
-    [StringLength(50)]
-    public string nome { get; set; } = null!;
-
-    [StringLength(50)]
-    public string cognome { get; set; } = null!;
-
-    public string fotoProfilo { get; set; } = null!;
-
-    public bool preferenzeNotifiche { get; set; } = true;
+    [StringLength(50)] [Required] public string cognome { get; set; } = null!;
+    [Required] public bool preferenzeNotifiche { get; set; } = true;
+    [Required] public string genere { get; set; }
+    [Required] public DateTime dataNascita { get; set; }
 }

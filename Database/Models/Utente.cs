@@ -51,6 +51,8 @@ public partial class Utente
     [Column(TypeName = "datetime")]
     public DateTime dataCreazione { get; set; }
 
+    public bool verificato { get; set; }
+
     [InverseProperty("utente")]
     public virtual ICollection<Agenda> Agenda { get; set; } = new List<Agenda>();
 

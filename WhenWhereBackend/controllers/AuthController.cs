@@ -66,7 +66,7 @@ public class AuthController(IAuthRepository _authRepository, ITokenService token
     }
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
+    [AuthorizeRole(ERuolo.Amministratore, ERuolo.Utente)]
     [ProducesResponseType(typeof(TokenInfoDTO), StatusCodes.Status200OK)]
     public async Task<ActionResult<TokenInfoDTO>> GetUserInfo()
     {
@@ -77,4 +77,19 @@ public class AuthController(IAuthRepository _authRepository, ITokenService token
         return Ok(infoToken);
     }
 
+
+    [HttpGet]
+    [AuthorizeRole(ERuolo.Amministratore, ERuolo.Utente)]
+    public async Task<ActionResult<string>> VerifyTokenAsync([Required] string email, [Required] string token)
+    {
+        try
+        {
+            var res = await _authRepository.VerifyTokenAsync(email, token);
+            return Ok(res);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
 }

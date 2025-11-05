@@ -31,7 +31,7 @@ public partial class AppDbContext : DbContext
     public virtual DbSet<Tag> Tag { get; set; }
 
     public virtual DbSet<Utente> Utente { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Agenda>(entity =>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DTO.mail;
+using Microsoft.Extensions.DependencyInjection;
 using Repository.interfaces;
 using Repository.profiler;
 using Repository.Services.admin;
@@ -6,6 +7,7 @@ using Repository.Services.agenda;
 using Repository.services.auth;
 using Repository.services.evento;
 using Repository.services.likes;
+using Repository.services.mail;
 using Repository.services.note;
 using Repository.services.social;
 using Repository.Services.tag;
@@ -64,9 +66,16 @@ public static class StartUpConfiguratorRepo
         services.AddScoped<ISocialRepo, SocialRepo>();
 
         #endregion
+
         #region Admin
 
         services.AddScoped<IAdminRepo, AdminRepo>();
+
+        #endregion
+
+        #region Mailtrap
+
+        services.AddScoped<IMailTrapRepository, MailTrapRepository>();
 
         #endregion
     }
