@@ -114,7 +114,6 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
 
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<ResAgendaDTO>> GetById([FromQuery] [Required] int agendaId)
     {
         try
@@ -128,7 +127,6 @@ public class AgendaController(IAgendaRepo _agendaRepo) : CustomController
     }
 
     [HttpGet]
-    [AuthorizeRole(ERuolo.Utente)]
     public async Task<ActionResult<List<ResAgendaDTO>>> GetByOwner([FromQuery] [Required] string username)
     {
         try
