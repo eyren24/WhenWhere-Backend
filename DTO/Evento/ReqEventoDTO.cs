@@ -14,8 +14,8 @@ public class ReqEventoDTO
     [Required]
     [Column(TypeName = "datetime")]
     public DateTime? dataFine { get; set; } = null;
-
-    [Required] [Column(TypeName = "text")] public string? descrizione { get; set; } = null;
+    
+    [Column(TypeName = "text")] public string? descrizione { get; set; } = null;
 
     [Required]
     [Column(TypeName = "decimal(1, 1)")]
