@@ -32,7 +32,7 @@ public class AuthRepository(AppDbContext _context, IMapper _mapper, IMailTrapRep
         await _context.SaveChangesAsync();
         await _mailer.SendWelcomeMailAsync(modello.email, modello.nome + modello.cognome, modello.token);
         return new TokenInfoDTO
-            { nomeCompleto = $"{modello.nome} {modello.cognome}", utenteId = modello.id, ruolo = ERuolo.Utente };
+            { nomeCompleto = $"{modello.nome} {modello.cognome}", utenteId = modello.id, ruolo = (ERuolo)modello.ruoloId };
     }
 
     public async Task<TokenInfoDTO> LoginAsync(ReqLoginUser request)

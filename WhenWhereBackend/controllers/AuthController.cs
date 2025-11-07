@@ -2,6 +2,7 @@
 using Auth.dto;
 using Auth.Interfaces;
 using DTO.Auth;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.interfaces;
 using WhenWhereBackend.DecoratoriCustom;
@@ -30,8 +31,8 @@ public class AuthController(IAuthRepository _authRepository, ITokenService token
     }
 
     [HttpPost]
-    [ProducesResponseType(typeof(ResAuthToken), StatusCodes.Status200OK)]
-    public async Task<IActionResult> Register(ReqRegisterUser req)
+    [AllowAnonymous]
+    public async Task<ActionResult<ResAuthToken>> Register(ReqRegisterUser req)
     {
         try
         {
@@ -45,6 +46,7 @@ public class AuthController(IAuthRepository _authRepository, ITokenService token
         }
         catch (Exception e)
         {
+            Console.WriteLine(e);
             return BadRequest(e.Message);
         }
     }

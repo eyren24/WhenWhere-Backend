@@ -23,7 +23,7 @@ public partial class Utente
 
     public string password { get; set; } = null!;
 
-    [StringLength(5)]
+    [StringLength(6)]
     public string? token { get; set; }
 
     [Column(TypeName = "datetime")]
